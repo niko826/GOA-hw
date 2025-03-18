@@ -1,8 +1,10 @@
-# Homework
+# Classwork
 
-#True and False or False or True and False
-# true and false = false 
-#false or false = false
-#false or true =  true 
-#true and false = false
-# anwser = false 
+
+sum = 0
+
+for number in range(10):
+    user_input = int(input("Please enter number (1-10): "))
+    sum = sum + user_input
+
+print(sum / 10)
