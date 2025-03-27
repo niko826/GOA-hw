@@ -1,0 +1,10 @@
+userinfo = []
+userinfo.append(input("enter your first name: "))
+userinfo.append(input("enter your last name: "))
+userinfo.append(input("enter your age: "))
+userinfo.append(input("when you were born: "))
+userinfo.append(input("enter your height: "))
+userinfo.append(input("enter your gender: "))
+userinfo.append(input("what is your job: "))
+userinfo.append(input("what is your GPA: "))
+print(userinfo)
