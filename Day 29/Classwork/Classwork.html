@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>სარეგისტრაციო ფორმა</title>
+</head>
+<body>
+    <h2>სარეგისტრაციო ფორმა</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="email">იმეილი:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="firstName">სახელი:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">გვარი:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="password">პაროლი:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>გენდერი:</label>
+        <input type="radio" id="male" name="gender" value="კაცი" required>
+        <label for="male">კაცი</label>
+        <input type="radio" id="female" name="gender" value="ქალი">
+        <label for="female">ქალი</label><br><br>
+
+        <label for="birthdate">დაბადების თარიღი:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <label for="profilePhoto">პროფილის ფოტო:</label>
+        <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required><br><br>
+
+        <input type="reset" value="გასუფთავება">
+        <input type="submit" value="რეგისტრაცია">
+    </form>
+</body>
+</html>
