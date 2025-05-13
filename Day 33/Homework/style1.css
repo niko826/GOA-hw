@@ -1,0 +1,29 @@
+/* body-ს ფონზე ვაყენებთ RGB ფერს */
+body {
+  background-color: rgb(230, 245, 255); /* ღია ცისფერი ფონი */
+  font-family: 'Arial', sans-serif;     /* შრიფტი */
+  padding: 20px;
+}
+
+/* სათაურის სტილი */
+h1 {
+  color: rgb(50, 100, 200); /* ლურჯი ელფერით */
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+/* პარაგრაფის სტილი */
+p {
+  color: rgb(60, 60, 60); /* მუქი ნაცრისფერი ტექსტი */
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* სურათის სტილი */
+img {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid rgb(50, 100, 200);
+  border-radius: 10px;
+}
