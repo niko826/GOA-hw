@@ -1,0 +1,11 @@
+.external-title {
+    color: darkblue;
+    text-align: center;
+    font-size: 32px;
+}
+
+.external-paragraph {
+    color: gray;
+    font-size: 18px;
+    line-height: 1.6;
+}
