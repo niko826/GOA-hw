@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Document</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #baff5f, #feb47b);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .color-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50% 50% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .orange { background-color: #f9a825; }
+  .red { background-color: #d81b60; }
+  .purple { background-color: #8e24aa; }
+
+  .card p {
+    padding: 0 15px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .btn-read {
+    background-color: #f9a825;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-read.red {
+    background-color: #d81b60;
+  }
+
+  .btn-read.purple {
+    background-color: #8e24aa;
+  }
+
+  .btn-read:hover {
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="color-circle orange">1</div>
+      <p>Never gone a give you </p>
+      <button class="btn-read orange">Read More</button>
+    </div>
+    <div class="card">
+      <div class="color-circle red">2</div>
+      <p>up</p>
+      <button class="btn-read red">Read More</button>
+    </div>
+    <div class="card">
+      <div class="color-circle purple">3</div>
+      <p>Never gone a let you done</p>
+      <button class="btn-read purple">Read More</button>
+    </div>
+  </div>
+</body>
+</html>
