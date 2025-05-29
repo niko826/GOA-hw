@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+main{
+    border: 10px solid rgb(18, 216, 18);
+    display: flex;
+    width: 900px;
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+section{
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;Classwork2
+    display: flex;
+
+}
+
+
+
+
+/* display -გადაქცევს ელემენტს "ფლექს კონტეინერად", რაც ნიშნავს რომ მისი შიგნით მყოფი შვილობილი ელემენტები (child elements) ავტომატურად გახდებიან "ფლექს ელემენტები
+
+ jsutify content    ეს მართავს მთავარ ღერძზე (main axis) ელემენტების განლაგებას ანუ როგორ გადანაწილდებიან ელემენტები ერთმანეთთან და ხელმისაწვდომ სივრცესთან მიმართებაში.
+
+ aligh-item   გადააქვს ტექსტი ცენტრში
