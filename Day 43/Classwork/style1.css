@@ -1,0 +1,118 @@
+/* გუგლის შრიფტის იმპორტი */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* ზოგადი სტილები ყველა ელემენტისთვის */
+* {
+    padding: 0px; /* ყველა ელემენტს უშლის შიდა პადინგს */
+    margin: 0px; /* ყველა ელემენტს უშლის გარე ზღვარს */
+    box-sizing: border-box; 
+    font-family: "Karla", sans-serif; /* შრიფტი Karla მთელი გვერდისთვის */
+}
+
+/* body-ს სტილი */
+body {
+    height: 100vh; /* სიგრძე მთლიანი ეკრანის სიმაღლეა */
+    display: flex; /* Flexbox განლაგების ჩართვა */
+    flex-direction: column; /* ელემენტები დალაგდებიან ვერტიკალურად */
+    justify-content: center; /* შიდა ელემენტების ცენტრირება ვერტიკალურად */
+    align-items: center; /* შიდა ელემენტების ცენტრირება ჰორიზონტალურად */
+    background-color: hsl(204, 43%, 93%); 
+}
+
+/* მთავარი კონტეინერის სტილი */
+.mainDiv {
+    border-radius: 5px; /* ოდნავ მომრგვალებული კუთხეები */
+    overflow: hidden; /* შიდა ელემენტები არ გადაცდეს საზღვრებს */
+}
+
+/* პირველი ბლოკის სტილი */
+.firstDiv {
+    background-color: white; 
+    height: 200px;
+    padding: 30px; 
+}
+
+/* პირველი ტექსტური პარაგრაფი */
+.paragraph1 {
+    color: #26a8a6; 
+    font-weight: 700; /* მუქი ტექსტი */
+    font-size: 18px;
+    margin-bottom: 25px; /* ქვედა დაშორება */
+}
+
+/* მეორე პარაგრაფი */
+.paragraph2 {
+    color: #BEDF31; 
+    font-weight: 500; /* საშუალო სისქე */
+    margin-bottom: 15px;
+}
+
+/* მესამე პარაგრაფი */
+.paragraph3 {
+    color: hsl(218, 22%, 67%); 
+}
+
+/* ორი ბლოკის კონტეინერი  */
+.twoDivsTogether {
+    display: flex;
+    flex-direction: row; /* ელემენტები ჰორიზონტალურად განლაგდება */
+}
+
+/* მარცხენა ბლოკი */
+.first {
+    background-color: #2BB4B1; 
+    padding: 30px;
+    width: 50%; /* 50% სიგანე */
+}
+
+/* მეოთხე პარაგრაფი */
+.paragraph4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* მეორე სათაური */
+h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* h2-ში არსებული span სტილი */
+h2 span {
+    color: hsl(179, 61%, 52%); 
+    font-size: 14px;
+    vertical-align: middle; /* გასწორება შუაში ვერტიკალურად */
+}
+
+/* მეხუთე პარაგრაფი */
+.paragraph5 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ღილაკის სტილი */
+button {
+    background-color: #BEDF31; 
+    border: none; /* ჩარჩო არ აქვს */
+    width: 100%; 
+    padding: 13px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700; 
+}
+
+/* მარჯვენა ბლოკი */
+.second {
+    background-color: #49BEBD; 
+    padding: 30px;
+    width: 50%;
+}
+
+/* მეექვსე პარაგრაფი */
+.paragraph6 {
+    color: hsl(204, 43%, 93%);
+    font-size: 14px;
+    margin-bottom: 3px;
+}
