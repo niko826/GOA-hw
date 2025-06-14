@@ -1,0 +1,99 @@
+body{
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #e0f1f7;
+display: grid;
+place-items: center;
+height: 100vh;
+}
+
+.container{
+background-color: #ffffff;
+width: 750px;
+border-radius: 10px;
+box-shadow: 0 10px 25px;
+overflow: hidden;
+}
+.page{
+   padding: 30px;
+   text-align: left; 
+}
+
+.page h1 {
+color: #2a9dac; 
+margin-bottom: 10px;
+}
+
+.page .guarantee{
+    color: #85aa34;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.intro .text{
+   color: #555555; 
+   line-height: 1.6;
+}
+
+
+.details{
+display: grid;
+grid-template-columns: 1fr 1fr;
+background-color: #2bb3b1;
+color: white;
+}
+
+
+.Subscription{
+padding: 30px;
+background-color: #2bb3b1;
+}
+
+.Subscription h2{
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+.Subscription .price span{
+font-size: 16px;
+margin: 10px 0;
+}
+
+.Subscription .note{
+   margin-bottom: 20px; 
+}
+
+.Subscription button {
+background-color: #b3d936;
+color: #000000;
+padding: 12px 24px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.Subscription button:hover {
+background-color: #a2c82a;
+}
+
+.features {
+padding: 30px; 
+background-color: #4abebd;
+}
+
+.features h3 {
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+.features ul{
+margin: 0;
+padding: 0;
+}
+
+.features ul li {
+font-size: 14px;
+line-height: 1.8;
+}
+
+
