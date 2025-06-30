@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(21, 128, 0);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transform: rotate(20deg) scale(1.2) translate(100px, 70px);
+      transition: 0.5s ease;
+    }
+
+    .box:hover {
+      transform: rotate(-15deg) scale(1.5) translate(0px, 0px);
+      background-color: rgb(61, 134, 139);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Box</div>
+
+</body>
+</html>

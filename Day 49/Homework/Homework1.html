@@ -1,0 +1,22 @@
+/* საერთო ელემენტის სტილი */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  /* transition უზრუნველყოფს გლუვ გადასვლას სტილის ცვლილებაზე */
+  transition: all 0.5s ease;
+
+  /* transform გამოიყენება ელემენტის გარდასახვისთვის: მასშტაბირება, ბრუნვა, გადაადგილება და სხვ. */
+  transform: scale(1) rotate(0deg) translate(0, 0);
+}
+
+/* როცა მაუსს ვადებთ ელემენტზე */
+.box:hover {
+  background-color: blue; /* ფერის გლუვი შეცვლა */
+
+  /* scale ზრდის ზომას 1.5-ჯერ */
+  /* rotate ატრიალებს ელემენტს 45 გრადუსით */
+  /* translate გადაადგილებს ელემენტს 50px მარჯვნივ და 20px ქვემოთ */
+  transform: scale(1.5) rotate(45deg) translate(50px, 20px);
+}
