@@ -1,0 +1,235 @@
+.main{
+height: 450px;
+width: 750px;
+background-color: hsl(157, 39%, 46%);
+border-radius: 10px;
+margin-left: 375px;
+margin-top: 50px;
+}
+
+
+.main2{
+height: 400px;
+width: 350px;
+background-color: rgb(7, 202, 66);
+border-radius: 10px;
+margin-left: 380px;
+padding-top: 30px;
+position: relative;
+top: 10px;
+background-color: hsl(183, 100%, 15%);
+}
+
+
+.bill{
+height: 30px;
+width: 350px;
+background-color: hsl(189, 47%, 97%);
+border-radius: 10px;
+position: absolute;
+left: 400px;
+bottom: 500px;
+}
+
+
+.dollar{
+position: absolute;
+right: 130px;
+top: 5px;
+}
+
+.price{
+position: absolute;
+left: 270px;
+bottom: -10px;
+}
+
+
+.tip{
+height: 160px;
+width: 330px;
+background-color: hsl(157, 39%, 46%);
+border-radius: 10px;
+position: absolute;
+left: 400px;
+bottom: 270px;
+}
+
+.tip5{
+width: 80px;
+height: 60px;
+background-color: hsl(183, 100%, 15%);
+position: relative;
+left: 20px;
+top: -10px;
+border-radius: 10px;
+}
+
+.tip10{
+width: 80px;
+height: 60px;
+background-color: hsl(183, 100%, 15%);
+position: relative;
+left: 120px;
+bottom: 90px;
+border-radius: 10px;
+}
+
+.tip15{
+width: 80px;
+height: 60px;
+background-color: hsl(172, 67%, 45%);
+position: relative;
+left: 220px;
+bottom: 170px;   
+border-radius: 10px; 
+}
+
+.Custom{
+width: 80px;
+height: 60px;
+background-color: hsl(189, 47%, 97%);
+position: relative;
+left: 220px;
+bottom: 340px;    
+border-radius: 10px;
+}
+
+.tip25{
+width: 80px;
+height: 60px;
+background-color: hsl(183, 100%, 15%);
+position: relative;
+left: 120px;
+bottom: 180px;    
+border-radius: 10px;
+}
+
+.tip50{
+width: 80px;
+height: 60px;
+background-color: hsl(183, 100%, 15%);
+position: relative;
+left: 20px;
+bottom: 260px;    
+border-radius: 10px;
+}
+
+.numberofpeople{
+width: 350px;
+height: 50px;
+border-radius: 10px;
+background-color:  hsl(189, 47%, 97%);
+position: absolute;
+left: 400px;
+bottom: 180px;
+}
+
+.number1{
+position: relative;
+bottom: 130px;
+}
+
+.number{
+position: relative;
+left: 300px;
+bottom: 30px;
+}
+
+.people{
+position: relative; 
+left: 20px;
+top: 20px;
+}
+
+.img{
+position: absolute;
+left: 15px;
+bottom: 10px;
+}
+.Tip5{
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+
+.Tip10{
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.Tip15{
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.Tip25{
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.Tip50{
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.custom{
+    position: relative;
+    top: 14px;
+}
+ .reset{
+   width: 250px; 
+   height: 50px;
+   background-color: hsl(172, 67%, 45%) ;
+   position: relative;
+   left: 60px;
+   top: 80px;
+   text-align: center;
+   border-radius: 10px;
+ }
+
+ .Reset{
+position: relative;
+top: 8px;
+ }
+
+.price1{
+position: relative;    
+left: 10px;
+bottom: 20px;
+}
+
+.price2{
+position: absolute;    
+bottom: 280px;
+left: 200px;
+font-size: 64px;
+}
+
+.price3{
+position: relative;
+top: 5%;    
+left: 5%;
+}
+
+.price4{
+position: absolute;    
+left: 170px;
+bottom: 130px;
+font-size: 64px;
+}
+
+.tips{
+position: absolute;
+left: 20px;
+bottom: 150px;
+}
+
+.price{
+position: absolute;
+top: -20px;
+}
