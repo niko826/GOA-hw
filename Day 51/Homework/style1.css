@@ -1,0 +1,190 @@
+@import url(https://fonts.google.com/specimen/League+Spartan);
+.fullscreen{
+width: 500px;
+position: absolute;
+left: 260px;
+top: 60px;
+}
+
+.screen1{
+width: 300px;
+height: 210px;
+background-color:hsl(300, 43%, 22%);
+border-radius: 10px;
+position: absolute;
+left: 250px;
+top: 270px;
+}
+
+
+
+.Smith{
+position: relative;
+left: 140px;
+bottom: 85px;
+}
+
+.Verified{
+position: relative;
+left: 140px;
+bottom: 100px;
+}
+
+.colton{
+border-radius: 50px;
+position: relative;
+top: 10px;
+left: 15px;
+}
+
+
+.p1{
+position: relative;
+bottom: 100px;
+}
+
+.screen2{
+width: 300px;
+height: 210px;
+background-color:hsl(300, 43%, 22%);
+border-radius: 10px;
+position: absolute;
+left: 600px;
+top: 300px;
+}
+.Irenephoto{
+border-radius: 50px;
+position: relative;
+top: 10px;
+left: 15px;
+
+}
+.Irene{
+position: relative;
+left: 130px;
+bottom: 80px;
+
+}
+
+.Verified2{
+position: relative;
+left: 130px;
+bottom: 90px;
+}
+
+.p2{
+position: relative;
+bottom: 100px;
+}
+
+.screen3{
+width: 300px;
+height: 210px;
+background-color:hsl(300, 43%, 22%);
+border-radius: 10px;
+position: absolute;
+left: 950px;
+top: 350px;
+}
+
+.anne{
+position: relative;
+left: 130px;
+bottom: 80px;
+}
+
+.Verified3{
+position: relative;
+left: 130px;
+bottom: 90px;
+}
+
+.p3{
+position: relative;
+bottom: 100px;
+}
+
+.annaphoto{
+border-radius: 50px;
+position: relative;
+top: 10px;
+left: 15px;
+}
+
+.div1{
+width:390px;
+height: 40px;
+background-color: rgb(201, 192, 180);
+position: absolute; 
+gap: 30px;
+left: 870px;
+top: 20px;
+border-radius: 8px;
+font-size: 12px;
+}
+
+.h5{
+position:relative;
+left: 120px;
+bottom: 7px;
+}
+
+.photos{
+position: absolute;
+top: 10px;
+}
+
+
+
+
+.div2{
+width:400px;
+height: 50px;
+background-color: rgb(201, 192, 180);
+position: absolute;
+left: 900px;
+top: 100px;
+border-radius: 8px;
+font-size: 12px;
+}
+
+.photos1{
+position: absolute;
+bottom:15px;
+}
+
+.h6{
+position: relative;
+top: 40px;
+left: 110px;
+}
+
+
+
+.div3{
+width:390px;
+height: 50px;
+background-color: rgb(201, 192, 180);
+position: relative;
+left: 930px;
+top: 190px;
+border-radius: 8px;
+font-size: 12px;
+}
+
+
+.photos2{
+position:  relative;
+bottom: 279px;
+}
+
+.h7{
+position: absolute;
+left: 120px;
+
+}
+
+.photo3{
+position: relative;
+top: 13px;
+}
