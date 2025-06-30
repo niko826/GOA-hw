@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="guessBtn">Guess the secret number</button>
+
+<script>
+  const secretNumber = 13; 
+  document.getElementById("guessBtn").addEventListener("click", function() {
+    const userInput = prompt("Enter a number:");
+    const guessedNumber = Number(userInput);
+
+    if (guessedNumber > secretNumber) {
+      alert("Your number is too high, try again");
+    } else if (guessedNumber < secretNumber) {
+      alert("Your number is too low, try again");
+    } else {
+      alert("You have guessed the secret number");
+    }
+  });
+</script>
+
+</body>
+</html>
