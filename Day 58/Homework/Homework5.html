@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heads or Tails</title>
+</head>
+<body>
+
+  <!-- ორი ღილაკი -->
+  <button id="headsBtn">Heads</button>
+  <button id="tailsBtn">Tails</button>
+
+  <!-- პარაგრაფი -->
+  <p id="resultParagraph"></p>
+
+  <script>
+    // წვდომა ელემენტებზე
+    const headsButton = document.getElementById("headsBtn");
+    const tailsButton = document.getElementById("tailsBtn");
+    const resultParagraph = document.getElementById("resultParagraph");
+
+    // მოვლენის მსმენელები
+    headsButton.addEventListener("click", function () {
+      resultParagraph.textContent = "Heads";
+    });
+
+    tailsButton.addEventListener("click", function () {
+      resultParagraph.textContent = "Tails";
+    });
+  </script>
+
+</body>
+</html>
