@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .highlight {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <p id="mytext">ეს არის საწყისი ტექსტი</p>
+
+  <script>
+    // ვირჩევთ პარაგრაფს document-ის საშუალებით
+    const paragraph = document.querySelector("#mytext"); 
+    // ან შეიძლებოდა: document.getElementById("mytext");
+
+    // ვცვლით ტექსტს
+    paragraph.textContent = "ტექსტი წარმატებით შეიცვალა";
+
+    // ვცვლით ფონს
+    paragraph.style.backgroundColor = "lightgreen";
+
+    // ვცვლით ID-ს
+    paragraph.id = "newId";
+
+    // ვცვლით კლასს
+    paragraph.className = "highlight";
+  </script>
+
+</body>
+</html>

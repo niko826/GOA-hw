@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #myParagraph {
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="myParagraph">Hello</p>
+
+  <button id="bgBtn">Change Background Color</button>
+  <button id="textColorBtn">Change Text Color</button>
+  <button id="fontSizeBtn">Change Font Size</button>
+
+  <script>
+    const paragraph = document.getElementById('myParagraph');
+    const bgBtn = document.getElementById('bgBtn');
+    const textColorBtn = document.getElementById('textColorBtn');
+    const fontSizeBtn = document.getElementById('fontSizeBtn');
+
+    bgBtn.addEventListener('click', () => {
+      paragraph.style.backgroundColor = getRandomColor();
+    });
+
+    textColorBtn.addEventListener('click', () => {
+      paragraph.style.color = getRandomColor();
+    });
+
+    fontSizeBtn.addEventListener('click', () => {
+      const sizes = ['16px', '20px', '24px', '30px'];
+      const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+      paragraph.style.fontSize = randomSize;
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>
