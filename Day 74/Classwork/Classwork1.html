@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0d1424;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+        transition: background 0.3s, color 0.3s;
+    }
+    .light-mode {
+        background-color: #f7f7f7;
+        color: #000;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .toolbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #444;
+        color: white;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    .card {
+        background: #1c2333;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background 0.3s;
+    }
+    .light-mode .card {
+        background: white;
+        color: black;
+    }
+    .card h3 {
+        margin: 0 0 10px;
+    }
+    .card p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        flex: 1;
+    }
+    .remove-btn {
+        background: crimson;
+        color: white;
+        border: none;
+        padding: 6px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .remove-btn:hover {
+        opacity: 0.85;
+    }
+</style>
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="toggleTheme()">🌗 Toggle Theme</button>
+        <button onclick="addCard()">➕ Add Extension</button>
+    </div>
+    <div class="card-container" id="cardContainer">
+        <div class="card">
+            <h3>DevLens</h3>
+            <p>Quickly inspect page layouts and visualize element boundaries.</p>
+            <button class="remove-btn" onclick="removeCard(this)">Remove</button>
+        </div>
+        <div class="card">
+            <h3>StyleSpy</h3>
+            <p>Instantly analyze and copy CSS from any webpage element.</p>
+            <button class="remove-btn" onclick="removeCard(this)">Remove</button>
+        </div>
+    </div>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+}
+
+function removeCard(button) {
+    button.parentElement.remove();
+}
+
+function addCard() {
+    const name = prompt("Enter extension name:");
+    const desc = prompt("Enter extension description:");
+    if (name && desc) {
+        const cardContainer = document.getElementById("cardContainer");
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <button class="remove-btn" onclick="removeCard(this)">Remove</button>
+        `;
+        cardContainer.appendChild(card);
+    }
+}
+</script>
+</body>
+</html>
+
