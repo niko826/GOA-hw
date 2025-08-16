@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Form</title>
+</head>
+<body>
+
+  <h2>Create Account</h2>
+
+  <form id="accountForm">
+    <input type="text" id="fullname" placeholder="Full Name" required><br><br>
+    <input type="email" id="email" placeholder="Email" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Create Account</button>
+  </form>
+
+  <script>
+
+    class Account {
+      #password;
+      #email;
+
+      constructor(fullname, email, password) {
+        this.fullname = fullname;
+        this.#email = email;
+        this.#password = password;
+      }
+
+      set setPassword(newPassword) {
+        const hasLetter = /[a-zA-Z]/.test(newPassword);
+        const hasNumber = /\d/.test(newPassword);
+
+        if (newPassword.length >= 6 && hasLetter && hasNumber) {
+          this.#password = newPassword;
+          console.log("Password updated successfully");
+        } else {
+          console.log("Password must be at least 6 characters and contain both letters and numbers.");
+        }
+      }
+
+      get getEmail() {
+        return this.#email;
+      }
+    }
+
+    const accounts = [];
+
+
+    const form = document.getElementById("accountForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+  
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+   
+      const newAccount = new Account(fullname, email, password);
+
+  
+      accounts.push(newAccount);
+
+
+      console.log("Account created:", newAccount);
+      console.log("Accounts list:", accounts);
+
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
