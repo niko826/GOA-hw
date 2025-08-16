@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+</head>
+<body>
+  <button onclick="handleClick()">Enter the number</button>
+  <div id="output"></div>
+
+  <script>
+    function handleClick() {
+      const num1 = parseInt(prompt("Enter the first number:"), 10);
+      const num2 = parseInt(prompt("Enter the second number:"), 10);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("please enter both number correctly.");
+        return;
+      }
+
+      const sum = num1 + num2;
+      const sumType = sum % 2 === 0 ? "even" : "odd";
+      const type1 = num1 % 2 === 0 ? "even" : "odd";
+      const type2 = num2 % 2 === 0 ? "even" : "odd";
+
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = `
+        <p>Sum = ${sum} - ${sumType}</p>
+        <p>${num1} - ${type1}</p>
+        <p>${num2} - ${type2}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
