@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addElement()">add</button>
+<div id="container"></div>
+
+<script>
+  function addElement() {
+    let newEl = document.createElement("div");
+    newEl.style.backgroundColor = "red";
+    newEl.style.width = "100px";
+    newEl.style.height = "50px";
+    newEl.style.margin = "5px";
+    document.getElementById("container").appendChild(newEl);
+  }
+</script>
+
+</body>
+</html>

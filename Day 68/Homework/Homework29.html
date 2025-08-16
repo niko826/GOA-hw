@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="increaseCount()">increase</button>
+<p id="count">0</p>
+
+<script>
+  function increaseCount() {
+    let p = document.getElementById("count");
+    p.textContent = parseInt(p.textContent) + 1;
+  }
+</script>
+
+</body>
+</html>
