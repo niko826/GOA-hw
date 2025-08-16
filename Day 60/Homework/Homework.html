@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+ <!--slice() - ეს მეთოდი ქმნის ახალ მასივს, რომელიც შეიცავს მასივის ნაწილს, მაგრამ არ ცვლის ორიგინალ მასივს.
+
+const array = [1, 2, 3, 4, 5];
+const newArray1 = array.slice(1, 3); // [2, 3]
+const newArray2 = array.slice(-3); // [3, 4, 5]
+const newArray3 = array.slice(0, -1); // [1, 2, 3, 4]
+
+
+splice() - ამ მეთოდით შესაძლებელია მასივიდან ელემენტების ამოღება ან მათი ჩანაცვლება
+const array = [1, 2, 3, 4, 5];
+array.splice(2, 1, 'a'); // [1, 2, 'a', 4, 5]
+array.splice(3, 0, 'b'); // [1, 2, 'a', 'b', 4, 5]
+array.splice(1, 2); // [1, 4, 5]
+
+
+
+shift() - ამ მეთოდით თქვენ შეგიძლიათ ამოიღოთ პირველი ელემენტი მასივიდან და დააბრუნოთ ის.
+const array = [1, 2, 3, 4, 5];
+const shiftedElement1 = array.shift(); // 1, array becomes [2, 3, 4, 5]
+const shiftedElement2 = array.shift(); // 2, array becomes [3, 4, 5]
+
+
+
+unshift() - ამ მეთოდით თქვენ შეგიძლიათ დაემატოთ ელემენტი მასივის დასაწყისში.
+const array = [2, 3, 4];
+array.unshift(1); // [1, 2, 3, 4]
+array.unshift(-1, 0); // [-1, 0, 1, 2, 3, 4]
+
+indexOf() - ეს მეთოდი ეძებს მასივში ელემენტს და აბრუნებს მის ინდექსს, თუ ის არსებობს.
+const array = [1, 2, 3, 4, 5];
+const index1 = array.indexOf(3); // 2
+const index2 = array.indexOf(6); // -1 (not found)
+
+
+getElementById - აქ ჩვენ ჯავასკრიპტში ვპოულობთ ელემენტს უნიკალური ადით
+getElementsByClassName -  აქ ჩვენ ჯავასკრიპტში ვპოულობთ ელემენტებს კლასის სახელით
+getElementsByTagName -   აქ ჩვენ ჯავასკრიპტში ვპოულობთ ელემენტებს თეგებით
+-->
+    <script>
+
+let names = [];
+
+let pushed = names.push(`nika`,`nika`,`nika`,`nika`,`nika`);
+
+console.log(names);
+
+
+let films = [`Avengers`,`matrix`,`transformers`,`aladin`];
+
+let removed = films.pop()
+
+console.log(films);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="myDiv">Original Content</div>
+
+  <div class="myClass">Class Element 1</div>
+  <div class="myClass">Class Element 2</div>
+
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+
+  <script>
+    // 1. getElementById - აბრუნებს მხოლოდ ერთ ელემენტს (უნიკალური ID)
+    const elementById = document.getElementById("myDiv");
+
+    // 2. getElementsByClassName - აბრუნებს HTMLCollection-ს (სია ელემენტების)
+    const elementsByClass = document.getElementsByClassName("myClass");
+
+    // 3. getElementsByTagName - ასევე აბრუნებს HTMLCollection-ს
+    const paragraphs = document.getElementsByTagName("p");
+
+    // ვხედავთ რა აბრუნებენ ეს მეთოდები:
+    console.log("By ID:", elementById);                     // ერთი <div>
+    console.log("By Class:", elementsByClass);              // HTMLCollection (2 ელემენტი)
+    console.log("By Tag:", paragraphs);                     // HTMLCollection (2 პარაგრაფი)
+
+    // getElementById გამოყენებით შიგთავსის ჩანაცვლება და ახალი ელემენტების ჩამატება
+    elementById.innerHTML = `
+      <p><b>Bold Text</b></p>
+      <p><i>Italic Text</i></p>
+      <p><u>Underlined Text</u></p>
+    `;
+
+    /*
+      განსხვავება მეთოდებს შორის:
+      - getElementById: აბრუნებს ერთ კონკრეტულ ელემენტს უნიკალური ID-ს მიხედვით.
+      - getElementsByClassName: აბრუნებს HTMLCollection-ს, ყველა იმ ელემენტზე რომლებსაც იგივე კლასი აქვთ.
+      - getElementsByTagName: აბრუნებს HTMLCollection-ს კონკრეტული HTML ტეგის მქონე ყველა ელემენტზე.
+
+      განსხვავება innerHTML და textContent შორის:
+      - innerHTML → საშუალებას გაძლევთ HTML კოდის ჩამატება/წაკითხვა. პარაგრაფებში HTML ტეგები იმუშავებს.
+      - textContent → უბრალოდ ტექსტი. HTML ტეგები დაიწერება როგორც ტექსტი და არ აღიქმება როგორც სტრუქტურა.
+
+      მაგალითი:
+      div.innerHTML = "<p><b>Hello</b></p>"; → გამოიტანს გამუქებულ ტექსტს
+      div.textContent = "<p><b>Hello</b></p>"; → გამოიტანს: <p><b>Hello</b></p> როგორც უბრალო ტექსტს
+    */
+  </script>
+</body>
+</html>
