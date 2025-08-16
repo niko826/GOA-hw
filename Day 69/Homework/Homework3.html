@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documenr</title>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      let taskText = document.getElementById("taskInput").value;
+      if (taskText.trim() === "") return;
+
+      let li = document.createElement("li");
+      li.textContent = taskText;
+
+      // Edit ღილაკი
+      let editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+      editBtn.onclick = function () {
+        let newText = prompt("Edit task:", li.textContent);
+        if (newText !== null) {
+          li.firstChild.textContent = newText;
+        }
+      };
+
+      // Delete ღილაკი
+      let deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.onclick = function () {
+        li.remove();
+      };
+
+      li.append(" ", editBtn, deleteBtn);
+      document.getElementById("taskList").appendChild(li);
+
+      document.getElementById("taskInput").value = "";
+    }
+  </script>
+</body>
+</html>
