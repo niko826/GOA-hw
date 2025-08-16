@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Registration</h2>
+  <input type="text" id="fullname" placeholder="Full Name">
+  <input type="email" id="regEmail" placeholder="Email">
+  <input type="password" id="regPassword" placeholder="Password">
+  <button onclick="register()">Register</button>
+
+  <h2>Authorization</h2>
+  <input type="email" id="authEmail" placeholder="Email">
+  <input type="password" id="authPassword" placeholder="Password">
+  <button onclick="login()">Login</button>
+
+  <h2>Registered Users</h2>
+  <ul id="userList"></ul>
+
+  <script>
+    let users = [];
+
+    function register() {
+      let fullname = document.getElementById("fullname").value;
+      let email = document.getElementById("regEmail").value;
+      let password = document.getElementById("regPassword").value;
+
+      // თუ ეს email უკვე არსებობს
+      let exists = users.some(user => user.email === email);
+      if (exists) {
+        alert("The email already registered");
+        return;
+      }
+
+      // ვამატებთ ახალ მომხმარებელს
+      let newUser = { fullname, email, password };
+      users.push(newUser);
+      alert("Registration successful");
+
+      renderUsers();
+    }
+
+    function login() {
+      let email = document.getElementById("authEmail").value;
+      let password = document.getElementById("authPassword").value;
+
+      let user = users.find(user => user.email === email && user.password === password);
+
+      if (user) {
+        alert("You have logged in successfully");
+      } else {
+        alert("Your login information is incorrect");
+      }
+    }
+
+    function renderUsers() {
+      let userList = document.getElementById("userList");
+      userList.innerHTML = "";
+      users.forEach(user => {
+        let li = document.createElement("li");
+        li.textContent = `${user.fullname} (${user.email})`;
+        userList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
