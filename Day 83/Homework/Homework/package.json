@@ -1,0 +1,17 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Homework.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chance": "^1.1.13",
+    "qrcode": "^1.5.4"
+  }
+}
