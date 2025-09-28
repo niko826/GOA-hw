@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(28, 28, 70);
+}
+
+#div1{
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 520px;
+    top: 100px;
+}
+
+#img1{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    left: 570px;
+    top: 130px;
+}
+
+#hp{
+position: absolute;
+left: 530px;
+top: 200px;
+}
+
+#p1{
+    position: absolute;
+    top: 250px;
+    left: 575px;
+}
+
+#bth2{
+    position: absolute;
+    top: 380px;
+    left: 580px;
+    font-size: 25px;
+    border-radius: 7px;
+}
+#bth2:hover {
+      background-color: #2a5f9c; 
+      transform: scale(1.01);}
+#bth2:active {
+      background-color: #206d99;
+      transform: scale(0.98);    
+    }
