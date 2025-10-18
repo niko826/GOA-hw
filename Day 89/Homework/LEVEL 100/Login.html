@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register - Cybersecurity Awareness</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #0f172a; color: #f8fafc; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+
+    header { text-align: center; margin-bottom: 30px; }
+    header h1 { font-size: 2rem; color: #38bdf8; }
+    header p { margin-top: 10px; color: #94a3b8; font-size: 1rem; }
+
+    .auth-container { background: #1e293b; padding: 40px 30px; border-radius: 12px; width: 100%; max-width: 400px; text-align: center; }
+    .auth-container h2 { color: #f1f5f9; margin-bottom: 20px; }
+    .auth-container input { width: 80%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 15px; font-size: 1rem; }
+    .auth-container button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 15px; border-radius: 8px; margin: 5px; cursor: pointer; transition: background 0.3s, transform 0.2s; }
+    .auth-container button:hover { background: #0ea5e9; transform: scale(1.05); }
+    #authResult { margin-top: 15px; font-weight: bold; }
+
+    footer { margin-top: 20px; color: #94a3b8; font-size: 0.9rem; text-align: center; }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 1.5rem; }
+      header p { font-size: 0.9rem; }
+      .auth-container h2 { font-size: 1.2rem; }
+
+    }
+    .links1 {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+    }
+
+    .links1 a {
+      text-decoration: none;
+      color: #38bdf8;
+      padding: 10px 15px;
+      background: #1e293b;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .links1 a:hover {
+      background: #334155;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛡️ Cybersecurity Awareness</h1>
+    <p>Login or Register to access your account</p>
+  </header>
+
+  <div class="auth-container">
+    <h2>Login / Register</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password ">
+    <br>
+    <button onclick="registerUser()">Register</button>
+    <button onclick="loginUser()">Login</button>
+    <p id="authResult"></p>
+  </div>
+
+  <div class="links1">
+    <a href="about us.html">About Us</a>
+  </div>
+
+  <footer>
+    © 2025 Cybersecurity | Learn. Protect. Stay Secure.
+  </footer>
+
+  <script>
+    function isPasswordValid(password) {
+      return password.length >= 6 && password.length <= 12;
+    }
+
+    function registerUser() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const authResult = document.getElementById('authResult');
+
+      if (!username || !password) {
+        authResult.textContent = "❌ Please enter username and password.";
+        authResult.style.color = "#ef4444";
+        return;
+      }
+
+      if (!isPasswordValid(password)) {
+        authResult.textContent = "❌ Password must be 6-12 characters.";
+        authResult.style.color = "#ef4444";
+        return;
+      }
+
+      if (localStorage.getItem('user_' + username)) {
+        authResult.textContent = "❌ User already exists. Please login.";
+        authResult.style.color = "#ef4444";
+        return;
+      }
+
+      localStorage.setItem('user_' + username, password);
+      authResult.textContent = "✅ Registered successfully!";
+      authResult.style.color = "#22c55e";
+      
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000);
+    }
+
+
+
+
+    function loginUser() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const authResult = document.getElementById('authResult');
+
+      if (!isPasswordValid(password)) {
+        authResult.textContent = "❌ Password must be 6-12 characters.";
+        authResult.style.color = "#ef4444";
+        return;
+      }
+
+      const storedPassword = localStorage.getItem('user_' + username);
+
+      if (!storedPassword) {
+        authResult.textContent = "❌ User not found. Please register first.";
+        authResult.style.color = "#ef4444";
+        return;
+      }
+
+      if (storedPassword === password) {
+        authResult.textContent = `✅ Welcome, ${username}!`;
+        authResult.style.color = "#22c55e";
+        setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000);
+    }
+
+      else {
+        authResult.textContent = "❌ Incorrect password.";
+        authResult.style.color = "#ef4444";
+      }
+
+      if (username === "admin" && password === "admin!@#$%!^") {
+        authResult.textContent = `✅ Welcome, ${username}!`;
+        authResult.style.color = "#22c55e";
+        setTimeout(() => {
+          window.location.href = "admin.html";
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html>

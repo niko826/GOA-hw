@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Cybersecurity Awareness</title>
+</head>
+<body>
+<header>
+    <div id="links1">
+        <a href="Index.html">Main menu</a>
+        <a href="about us.html">About us</a>
+      </div>
+</header>
+
+<main>
+
+    <style>
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    footer {
+      margin-top: 1280px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+     /* About & Contact Links */
+     #links1 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-right: 1400px;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+    }
+
+    #links1 a {
+      text-decoration: none;
+      color: #38bdf8;
+      padding: 10px 15px;
+      background: #1e293b;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #links1 a:hover {
+      background: #334155;
+      transform: scale(1.05);
+
+
+    }
+
+    #background-img{
+      position: absolute;
+      top: 0px;    
+      left: 0px;  
+      width: 1900px;
+      height: 1350px;  
+      filter: blur(7px);
+      transform: rotate(0deg) scale(1);  
+      z-index: -1;
+    }
+
+    #div2{
+    height: 500px;
+    width: 300px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    color: #f1f5f9;
+    font-size: 1.2rem;
+    animation: float 3s ease-in-out infinite;
+    position: absolute;
+    right: 1200px;
+    box-shadow: #38bdf8 10px 5px;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    
+    #div1{
+    height: 500px;
+    width: 300px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    color: #f1f5f9;
+    font-size: 1.2rem;
+    animation: float 3s ease-in-out infinite;
+    position: absolute;
+    right: 800px;
+    box-shadow: #38bdf8 10px 5px;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    #div3{
+    height: 500px;
+    width: 300px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    color: #f1f5f9;
+    font-size: 1.2rem;
+    animation: float 3s ease-in-out infinite;
+    position: absolute;
+    right: 400px;
+    box-shadow: #38bdf8 10px 5px;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    </style>
+
+<div id="div1">
+<h1>Key tool categories & examples</h1>
+<br>
+<h6>
+    Recon / OSINT: discover targets and public info — Nmap, theHarvester, Shodan.
+
+Web application testing: find web vulnerabilities — Burp Suite, OWASP ZAP, Nikto.
+
+Vulnerabilityscanning: automated checks for known issues — Nessus, OpenVAS.
+
+Network / packet analysis: inspect traffic and protocols — Wireshark, tcpdump.
+
+Password & credential auditing: test password strength (lab use) — Hashcat, John the Ripper.
+
+Wireless testing: audit Wi‑Fi security — Aircrack‑ng, Kismet.
+
+Exploitation / post‑exploit (labs only): Metasploit (use responsibly; many of these have dual purpose).
+</h6>
+</div>
+
+<img src="Images/Crowdstrike.png" alt="CrowdStrike" id="background-img">
+
+<div id="div2">
+<h1>What ethical hacking is (short)?</h1>
+<p>Ethical hacking (penetration testing) is the authorized,<br> legal practice of probing systems <br>to find security weaknesses so<br> they can be fixed before attackers <br>exploit them. Always operate with <br>explicit permission and<br> a defined scope.</p>
+</div>
+ 
+<div id="div3">
+<h2>How to learn (practical path)</h2>
+<br>
+<h5>Fundamentals: TCP/IP, HTTP, Linux/Windows basics, and a scripting language (Python or Bash).
+
+    Practice legally: use platforms like TryHackMe, Hack The Box, VulnHub to gain hands‑on skills.
+    
+    Master core tools: start with Nmap, Wireshark, and Burp Suite (free edition).
+    
+    Study frameworks: OWASP Top 10 for web apps and MITRE ATT&CK for adversary behaviors.
+    
+    Certify & document: consider eJPT/OSCP when ready; write clear, professional reports of your findings.</h5>
+</div>
+
+
+<main>
+
+</main>
+
+
+
+
+<footer>
+    <p>© 2025 Cybersecurity | Learn. Protect. Stay Secure.</p>
+</footer>
+
+
+</body>
+</html>
