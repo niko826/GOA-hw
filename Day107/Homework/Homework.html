@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Desserts Shop</title>
+</head>
+<body class="bg-rose-50 p-10">
+  <div class="grid grid-cols-4 gap-8">
+    <div class="col-span-3">
+      <h1 class="text-4xl font-bold mb-8">Desserts</h1>
+
+      <div id="productList" class="grid grid-cols-3 gap-6">
+      </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-xl p-6 h-fit sticky top-10">
+      <h2 class="text-2xl font-semibold mb-4">Your Cart (<span id="cartCount">0</span>)</h2>
+      <div id="cartItems" class="text-gray-500 text-sm">Your added items will appear here</div>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+      { name: "Waffle with Berries", price: 6.5, img: "https://i.imgur.com/Yg5uZyG.jpg" },
+      { name: "Vanilla Bean Crème Brûlée", price: 7.0, img: "https://i.imgur.com/c0QYtG4.jpg" },
+      { name: "Macaron Mix of Five", price: 8.0, img: "https://i.imgur.com/CTej7lz.jpg" },
+      { name: "Classic Tiramisu", price: 5.5, img: "https://i.imgur.com/QlGqQUU.jpg" },
+      { name: "Pistachio Baklava", price: 4.0, img: "https://i.imgur.com/yq91W2I.jpg" },
+      { name: "Lemon Meringue Pie", price: 5.0, img: "https://i.imgur.com/5BtAhAM.jpg" },
+      { name: "Red Velvet Cake", price: 4.5, img: "https://i.imgur.com/3uJtKso.jpg" },
+      { name: "Salted Caramel Brownie", price: 5.5, img: "https://i.imgur.com/Kj6TEqp.jpg" },
+      { name: "Vanilla Panna Cotta", price: 6.5, img: "https://i.imgur.com/ewsq5Un.jpg" }
+    ];
+
+    const productList = document.getElementById("productList");
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+
+    let cart = [];
+
+    function updateCart() {
+      cartCount.textContent = cart.length;
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = "<p class='text-gray-500'>Your added items will appear here</p>";
+        return;
+      }
+
+      cartItems.innerHTML = cart
+        .map(
+          (item) => `
+          <div class='flex justify-between border-b py-2'>
+            <span>${item.name}</span>
+            <span>$${item.price.toFixed(2)}</span>
+          </div>`
+        )
+        .join("");
+    }
+
+    function addToCart(product) {
+      cart.push(product);
+      updateCart();
+    }
+
+    function renderProducts() {
+      productList.innerHTML = products
+        .map(
+          (p) => `
+          <div class="bg-white shadow rounded-xl overflow-hidden">
+            <img src="${p.img}" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">${p.name}</h3>
+              <p class="text-gray-700 mb-3">$${p.price.toFixed(2)}</p>
+              <button onclick='addToCart(${JSON.stringify(p)})' class="bg-orange-500 text-white px-4 py-1 rounded-lg hover:bg-orange-600">Add to Cart</button>
+            </div>
+          </div>`
+        )
+        .join("");
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
